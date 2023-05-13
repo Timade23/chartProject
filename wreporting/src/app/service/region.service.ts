@@ -11,8 +11,9 @@ export class RegionService {
 
 
   public getRegions(): Observable<any> {
-    let headers = this.getHeaderConfigurations();
-    return this.httpclient.get<any[]>('https://localhost:7250/Regions', { headers: headers});
+    debugger;
+    let appheaders = this.getHeaderConfigurations();
+    return this.httpclient.get<any[]>('https://localhost:7250/Regions', { headers: appheaders});
   }
 
   private getHeaderConfigurations()

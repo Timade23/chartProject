@@ -22,7 +22,7 @@ namespace ZAHike.API.Controllers
             var listOfRegions = await zAHikeDbContext.Regions
                                     .Include(t => t.Trails)
                                     .ToListAsync();
-            
+
             return Ok(listOfRegions);
         }
     }

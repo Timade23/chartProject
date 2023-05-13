@@ -16,6 +16,7 @@ export class ChartsComponent implements OnInit{
 
 
   ngOnInit(): void {
+    debugger;
     this.regionService.getRegions().subscribe(response => {
       let regionList = response;
       debugger;
