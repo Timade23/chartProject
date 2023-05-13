@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart,registerables } from 'node_modules/chart.js';
 import { RegionService } from '../service/region.service';
+import { RegionModel } from '../service/Models/regionsModel';
 Chart.register(...registerables);
 
 @Component({
@@ -11,37 +12,54 @@ Chart.register(...registerables);
 
 export class ChartsComponent implements OnInit{
 
+  data: any;
+
   constructor(private regionService : RegionService) {}
 
 
 
   ngOnInit(): void {
-    debugger;
     this.regionService.getRegions().subscribe(response => {
       let regionList = response;
-      debugger;
+
+      this.data = response.$values;
+
+      this.populateChartData(this.data);
       console.log('data',regionList)
       return regionList
     });
+  }
+
+  populateChartData(data: RegionModel[]) {
+    
+    let labelsData: string [] = [];
+    let labelsPopulation: number [] = [];
+    
+    data.forEach((element: any) => {
+      labelsData.push(element.code);
+      labelsPopulation.push(element.population)
+    });
+
 
     new Chart("barchart", {
-    type: 'bar',
-    data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-      datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
+      type: 'bar',
+      data: {
+        labels: labelsData,
+        datasets: [{
+          label: '# of Votes',
+          data: labelsPopulation,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
         }
       }
-    }
-  });
+    });
+
 
   }
 
