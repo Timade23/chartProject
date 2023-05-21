@@ -1,0 +1,46 @@
+<h2 class="my-5">Items in cart</h2>
+
+<div class="container products-container">
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Subscription</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total Cost</th>
+            </tr>
+        </thead>
+
+
+        <tbody class="table-body">
+            <tr *ngFor="let cartSub of subscriptionsInCart">
+                <td>{{cartSub.subscription.name}}</td>
+                <td>{{cartSub.subscription.price}}</td>
+                <td>
+                    <span class="increase" style="color:#89cff0">
+                        <i class="fa-solid fa-circle-left fa-lg" (click)="reduceProdCount(cartSub.subscription)"></i>
+                    </span>
+                    {{cartSub.quantity}}
+                    <span class="decrease" style="color:#89cff0">
+                        <i class="fa-solid fa-circle-right fa-lg" (click)="increaseProdCount(cartSub.subscription)"></i>
+                    </span></td>
+                <td>{{cartSub.totalCost}}</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="table-footer">
+            <tr>
+                <td></td>
+                <td></td>
+                <td><b>Total:</b></td>
+                <td>{{totalCostOfSubcriptionsInCart}}</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <br>
+
+    <!-- <app-payfastcheckout></app-payfastcheckout> -->
+    <app-squarecheckout></app-squarecheckout>
+</div>
