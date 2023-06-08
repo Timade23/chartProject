@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\U05215804\\Documents\\Semester1_2023\\INF 354\\ChartProject\\ZAHike\\ZAHike.API\\ZAHike.API.csproj": {}
+    "C:\\Users\\U05215804\\Documents\\Semester1_2023\\INF 354\\ChartProject\\chartProject\\ZAHike\\ZAHike.API\\ZAHike.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\U05215804\\Documents\\Semester1_2023\\INF 354\\ChartProject\\ZAHike\\ZAHike.API\\ZAHike.API.csproj": {
+    "C:\\Users\\U05215804\\Documents\\Semester1_2023\\INF 354\\ChartProject\\chartProject\\ZAHike\\ZAHike.API\\ZAHike.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\U05215804\\Documents\\Semester1_2023\\INF 354\\ChartProject\\ZAHike\\ZAHike.API\\ZAHike.API.csproj",
+        "projectUniqueName": "C:\\Users\\U05215804\\Documents\\Semester1_2023\\INF 354\\ChartProject\\chartProject\\ZAHike\\ZAHike.API\\ZAHike.API.csproj",
         "projectName": "ZAHike.API",
-        "projectPath": "C:\\Users\\U05215804\\Documents\\Semester1_2023\\INF 354\\ChartProject\\ZAHike\\ZAHike.API\\ZAHike.API.csproj",
+        "projectPath": "C:\\Users\\U05215804\\Documents\\Semester1_2023\\INF 354\\ChartProject\\chartProject\\ZAHike\\ZAHike.API\\ZAHike.API.csproj",
         "packagesPath": "C:\\Users\\U05215804\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\U05215804\\Documents\\Semester1_2023\\INF 354\\ChartProject\\ZAHike\\ZAHike.API\\obj\\",
+        "outputPath": "C:\\Users\\U05215804\\Documents\\Semester1_2023\\INF 354\\ChartProject\\chartProject\\ZAHike\\ZAHike.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
