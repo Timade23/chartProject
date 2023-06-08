@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Subscription } from '../Model/subscriptionModel';
+import { SubscriptionCartOrganiserService } from 'src/app/services/SubscriptionCartOrganiserService';
 
 
 
@@ -16,7 +17,7 @@ import { Subscription } from '../Model/subscriptionModel';
 export class HomePage implements OnInit {
   subscriptions : Subscription[] | undefined;
 
-  constructor(private cartSubscription: CartSubscription) { }
+  constructor(private cartSubscriptionService: SubscriptionCartOrganiserService) { }
 
   ngOnInit() {
     this.subscriptions = [
