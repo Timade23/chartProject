@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
+import { FakeSubscriptionDataService } from '../../services/FakeSubscriptionDataService';
+import { SubscriptionCartOrganiserService } from '../../services/SubscriptionCartOrganiserService';
 
 @NgModule({
   imports: [
@@ -15,6 +17,7 @@ import { HomePage } from './home.page';
     IonicModule,
     HomePageRoutingModule
   ],
+  providers: [FakeSubscriptionDataService, SubscriptionCartOrganiserService],
   declarations: [HomePage]
 })
 export class HomePageModule {}

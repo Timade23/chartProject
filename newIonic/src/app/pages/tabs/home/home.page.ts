@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SubscriptionCartOrganiserService } from '../Model/subscriptionCartOrganiser';
 import { Subscription } from '../Model/subscriptionModel';
+import { SubscriptionCartOrganiserService } from '../../services/SubscriptionCartOrganiserService';
 
 @Component({
   selector: 'app-home',
@@ -43,6 +43,7 @@ export class HomePage implements OnInit {
   }
 
   addSubscriptionToCart(product : Subscription) {
+    debugger;
     this.cartSubscriptionService.addProdFromCart(product);
   }
 }
